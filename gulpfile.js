@@ -22,6 +22,7 @@ gulp.task('buildprod', () => {
     //直接编译
     gulp.src('./src/**/*.js')
         .pipe(babel({
+            //如果不设置成false，会使用外面的babelrc；外面的babelrc是给webpack用的
             babelrc: false,
             plugins: [
                 "transform-es2015-modules-commonjs" //专门编译import
