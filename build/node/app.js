@@ -16,7 +16,15 @@ var _errorhandler = require('./middleware/errorhandler');
 
 var _errorhandler2 = _interopRequireDefault(_errorhandler);
 
-var _log4js = require('log4js');
+var _controllerInit = require('./controllers/controllerInit');
+
+var _controllerInit2 = _interopRequireDefault(_controllerInit);
+
+var _koaSimpleRouter = require('koa-simple-router');
+
+var _koaSimpleRouter2 = _interopRequireDefault(_koaSimpleRouter);
+
+var _log4js = require('./log/log4js');
 
 var _log4js2 = _interopRequireDefault(_log4js);
 
@@ -24,14 +32,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 console.log('系统变量' + process.env.NODE_ENV);
 
-/* const logger = log4js.getLogger();
-logger.level = "error";
-logger.error('this is test for log4'); */
-_log4js2.default.configure({});
-
 const app = new _koa2.default();
 
-_errorhandler2.default.error(app);
+_errorhandler2.default.error(app, _log4js2.default);
+_controllerInit2.default.getAllRouters(app, _koaSimpleRouter2.default);
 
 const server = app.listen(_config2.default.port, () => {
     console.log('System is running at' + _config2.default.port);

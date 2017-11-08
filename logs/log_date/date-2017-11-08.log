@@ -1,0 +1,185 @@
+[2017-11-08 14:12:07.636] [ERROR] log_date - promise请求baidu失败
+[2017-11-08 14:12:07.636] [ERROR] log_date - { RequestError: Error: getaddrinfo ENOTFOUND newsasd.baidu.com newsasd.baidu.com:80
+    at new RequestError (C:\Users\Administrator\Desktop\jiagou\node_modules\request-promise-core\lib\errors.js:14:15)
+    at Request.plumbing.callback (C:\Users\Administrator\Desktop\jiagou\node_modules\request-promise-core\lib\plumbing.js:87:29)
+    at Request.RP$callback [as _callback] (C:\Users\Administrator\Desktop\jiagou\node_modules\request-promise-core\lib\plumbing.js:46:31)
+    at self.callback (C:\Users\Administrator\Desktop\jiagou\node_modules\request\request.js:186:22)
+    at emitOne (events.js:115:13)
+    at Request.emit (events.js:210:7)
+    at Request.onRequestError (C:\Users\Administrator\Desktop\jiagou\node_modules\request\request.js:878:8)
+    at emitOne (events.js:115:13)
+    at ClientRequest.emit (events.js:210:7)
+    at Socket.socketErrorListener (_http_client.js:401:9)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at emitErrorNT (internal/streams/destroy.js:64:8)
+    at _combinedTickCallback (internal/process/next_tick.js:138:11)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+  name: 'RequestError',
+  message: 'Error: getaddrinfo ENOTFOUND newsasd.baidu.com newsasd.baidu.com:80',
+  cause: 
+   { Error: getaddrinfo ENOTFOUND newsasd.baidu.com newsasd.baidu.com:80
+       at errnoException (dns.js:53:10)
+       at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:95:26)
+     code: 'ENOTFOUND',
+     errno: 'ENOTFOUND',
+     syscall: 'getaddrinfo',
+     hostname: 'newsasd.baidu.com',
+     host: 'newsasd.baidu.com',
+     port: 80 },
+  error: 
+   { Error: getaddrinfo ENOTFOUND newsasd.baidu.com newsasd.baidu.com:80
+       at errnoException (dns.js:53:10)
+       at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:95:26)
+     code: 'ENOTFOUND',
+     errno: 'ENOTFOUND',
+     syscall: 'getaddrinfo',
+     hostname: 'newsasd.baidu.com',
+     host: 'newsasd.baidu.com',
+     port: 80 },
+  options: 
+   { uri: 'http://newsasd.baidu.com/',
+     callback: [Function: RP$callback],
+     transform: undefined,
+     simple: true,
+     resolveWithFullResponse: false,
+     transform2xxOnly: false },
+  response: undefined }
+[2017-11-08 14:12:15.843] [ERROR] log_date - promise请求baidu失败
+[2017-11-08 14:12:15.844] [ERROR] log_date - { RequestError: Error: getaddrinfo ENOTFOUND newsasd.baidu.com newsasd.baidu.com:80
+    at new RequestError (C:\Users\Administrator\Desktop\jiagou\node_modules\request-promise-core\lib\errors.js:14:15)
+    at Request.plumbing.callback (C:\Users\Administrator\Desktop\jiagou\node_modules\request-promise-core\lib\plumbing.js:87:29)
+    at Request.RP$callback [as _callback] (C:\Users\Administrator\Desktop\jiagou\node_modules\request-promise-core\lib\plumbing.js:46:31)
+    at self.callback (C:\Users\Administrator\Desktop\jiagou\node_modules\request\request.js:186:22)
+    at emitOne (events.js:115:13)
+    at Request.emit (events.js:210:7)
+    at Request.onRequestError (C:\Users\Administrator\Desktop\jiagou\node_modules\request\request.js:878:8)
+    at emitOne (events.js:115:13)
+    at ClientRequest.emit (events.js:210:7)
+    at Socket.socketErrorListener (_http_client.js:401:9)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at emitErrorNT (internal/streams/destroy.js:64:8)
+    at _combinedTickCallback (internal/process/next_tick.js:138:11)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+  name: 'RequestError',
+  message: 'Error: getaddrinfo ENOTFOUND newsasd.baidu.com newsasd.baidu.com:80',
+  cause: 
+   { Error: getaddrinfo ENOTFOUND newsasd.baidu.com newsasd.baidu.com:80
+       at errnoException (dns.js:53:10)
+       at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:95:26)
+     code: 'ENOTFOUND',
+     errno: 'ENOTFOUND',
+     syscall: 'getaddrinfo',
+     hostname: 'newsasd.baidu.com',
+     host: 'newsasd.baidu.com',
+     port: 80 },
+  error: 
+   { Error: getaddrinfo ENOTFOUND newsasd.baidu.com newsasd.baidu.com:80
+       at errnoException (dns.js:53:10)
+       at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:95:26)
+     code: 'ENOTFOUND',
+     errno: 'ENOTFOUND',
+     syscall: 'getaddrinfo',
+     hostname: 'newsasd.baidu.com',
+     host: 'newsasd.baidu.com',
+     port: 80 },
+  options: 
+   { uri: 'http://newsasd.baidu.com/',
+     callback: [Function: RP$callback],
+     transform: undefined,
+     simple: true,
+     resolveWithFullResponse: false,
+     transform2xxOnly: false },
+  response: undefined }
+[2017-11-08 14:12:31.354] [ERROR] log_date - promise请求baidu失败
+[2017-11-08 14:12:31.354] [ERROR] log_date - { RequestError: Error: getaddrinfo ENOTFOUND newsasd.baidu.com newsasd.baidu.com:80
+    at new RequestError (C:\Users\Administrator\Desktop\jiagou\node_modules\request-promise-core\lib\errors.js:14:15)
+    at Request.plumbing.callback (C:\Users\Administrator\Desktop\jiagou\node_modules\request-promise-core\lib\plumbing.js:87:29)
+    at Request.RP$callback [as _callback] (C:\Users\Administrator\Desktop\jiagou\node_modules\request-promise-core\lib\plumbing.js:46:31)
+    at self.callback (C:\Users\Administrator\Desktop\jiagou\node_modules\request\request.js:186:22)
+    at emitOne (events.js:115:13)
+    at Request.emit (events.js:210:7)
+    at Request.onRequestError (C:\Users\Administrator\Desktop\jiagou\node_modules\request\request.js:878:8)
+    at emitOne (events.js:115:13)
+    at ClientRequest.emit (events.js:210:7)
+    at Socket.socketErrorListener (_http_client.js:401:9)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at emitErrorNT (internal/streams/destroy.js:64:8)
+    at _combinedTickCallback (internal/process/next_tick.js:138:11)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+  name: 'RequestError',
+  message: 'Error: getaddrinfo ENOTFOUND newsasd.baidu.com newsasd.baidu.com:80',
+  cause: 
+   { Error: getaddrinfo ENOTFOUND newsasd.baidu.com newsasd.baidu.com:80
+       at errnoException (dns.js:53:10)
+       at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:95:26)
+     code: 'ENOTFOUND',
+     errno: 'ENOTFOUND',
+     syscall: 'getaddrinfo',
+     hostname: 'newsasd.baidu.com',
+     host: 'newsasd.baidu.com',
+     port: 80 },
+  error: 
+   { Error: getaddrinfo ENOTFOUND newsasd.baidu.com newsasd.baidu.com:80
+       at errnoException (dns.js:53:10)
+       at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:95:26)
+     code: 'ENOTFOUND',
+     errno: 'ENOTFOUND',
+     syscall: 'getaddrinfo',
+     hostname: 'newsasd.baidu.com',
+     host: 'newsasd.baidu.com',
+     port: 80 },
+  options: 
+   { uri: 'http://newsasd.baidu.com/',
+     callback: [Function: RP$callback],
+     transform: undefined,
+     simple: true,
+     resolveWithFullResponse: false,
+     transform2xxOnly: false },
+  response: undefined }
+[2017-11-08 14:17:11.580] [ERROR] log_date - catch请求baidu失败
+[2017-11-08 14:17:11.582] [ERROR] log_date - { AssertionError [ERR_ASSERTION]: headers have already been sent
+    at Object.set status [as status] (C:\Users\Administrator\Desktop\jiagou\node_modules\koa\lib\response.js:85:5)
+    at Object.status (C:\Users\Administrator\Desktop\jiagou\node_modules\delegates\index.js:92:31)
+    at C:\Users\Administrator\Desktop\jiagou\build\node\controllers\indexController.js:23:28
+    at tryCatcher (C:\Users\Administrator\Desktop\jiagou\node_modules\bluebird\js\release\util.js:16:23)
+    at Promise._settlePromiseFromHandler (C:\Users\Administrator\Desktop\jiagou\node_modules\bluebird\js\release\promise.js:512:31)
+    at Promise._settlePromise (C:\Users\Administrator\Desktop\jiagou\node_modules\bluebird\js\release\promise.js:569:18)
+    at Promise._settlePromise0 (C:\Users\Administrator\Desktop\jiagou\node_modules\bluebird\js\release\promise.js:614:10)
+    at Promise._settlePromises (C:\Users\Administrator\Desktop\jiagou\node_modules\bluebird\js\release\promise.js:693:18)
+    at Async._drainQueue (C:\Users\Administrator\Desktop\jiagou\node_modules\bluebird\js\release\async.js:133:16)
+    at Async._drainQueues (C:\Users\Administrator\Desktop\jiagou\node_modules\bluebird\js\release\async.js:143:10)
+    at Immediate.Async.drainQueues (C:\Users\Administrator\Desktop\jiagou\node_modules\bluebird\js\release\async.js:17:14)
+    at runCallback (timers.js:781:20)
+    at tryOnImmediate (timers.js:743:5)
+    at processImmediate [as _immediateCallback] (timers.js:714:5)
+  generatedMessage: false,
+  name: 'AssertionError [ERR_ASSERTION]',
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==' }
+[2017-11-08 14:18:27.342] [ERROR] log_date - catch请求baidu失败
+[2017-11-08 14:18:27.344] [ERROR] log_date - { AssertionError [ERR_ASSERTION]: headers have already been sent
+    at Object.set status [as status] (C:\Users\Administrator\Desktop\jiagou\node_modules\koa\lib\response.js:85:5)
+    at Object.status (C:\Users\Administrator\Desktop\jiagou\node_modules\delegates\index.js:92:31)
+    at C:\Users\Administrator\Desktop\jiagou\build\node\controllers\indexController.js:23:28
+    at tryCatcher (C:\Users\Administrator\Desktop\jiagou\node_modules\bluebird\js\release\util.js:16:23)
+    at Promise._settlePromiseFromHandler (C:\Users\Administrator\Desktop\jiagou\node_modules\bluebird\js\release\promise.js:512:31)
+    at Promise._settlePromise (C:\Users\Administrator\Desktop\jiagou\node_modules\bluebird\js\release\promise.js:569:18)
+    at Promise._settlePromise0 (C:\Users\Administrator\Desktop\jiagou\node_modules\bluebird\js\release\promise.js:614:10)
+    at Promise._settlePromises (C:\Users\Administrator\Desktop\jiagou\node_modules\bluebird\js\release\promise.js:693:18)
+    at Async._drainQueue (C:\Users\Administrator\Desktop\jiagou\node_modules\bluebird\js\release\async.js:133:16)
+    at Async._drainQueues (C:\Users\Administrator\Desktop\jiagou\node_modules\bluebird\js\release\async.js:143:10)
+    at Immediate.Async.drainQueues (C:\Users\Administrator\Desktop\jiagou\node_modules\bluebird\js\release\async.js:17:14)
+    at runCallback (timers.js:781:20)
+    at tryOnImmediate (timers.js:743:5)
+    at processImmediate [as _immediateCallback] (timers.js:714:5)
+  generatedMessage: false,
+  name: 'AssertionError [ERR_ASSERTION]',
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==' }
