@@ -16,18 +16,21 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 const indexController = {
     index() {
-        return (ctx, next) => {
-            new _indexModel2.default().getData().then(function (htmlString) {
+        return async (ctx, next) => {
+            const indexModelIns = new _indexModel2.default();
+            const result = await indexModelIns.getData();
+            ctx.body = result;
+            /* indexModelIns.getData().then(function(htmlString) {
                 console.log(htmlString);
                 ctx.body = htmlString;
                 ctx.status = 200;
-            }, function (err) {
-                _log4js2.default.logger_log_date.error('promise请求baidu失败');
-                _log4js2.default.logger_log_date.error(err);
-            }).catch(function (err) {
-                _log4js2.default.logger_log_date.error('catch请求baidu失败');
-                _log4js2.default.logger_log_date.error(err);
-            });
+            }, function(err) {
+                log4js.logger_log_date.error('promise请求baidu失败');
+                log4js.logger_log_date.error(err);
+            }).catch(function(err) {
+                log4js.logger_log_date.error('catch请求baidu失败');
+                log4js.logger_log_date.error(err)
+            }) */
         };
     }
 };
