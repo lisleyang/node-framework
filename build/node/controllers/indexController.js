@@ -19,18 +19,7 @@ const indexController = {
         return async (ctx, next) => {
             const indexModelIns = new _indexModel2.default();
             const result = await indexModelIns.getData();
-            ctx.body = result;
-            /* indexModelIns.getData().then(function(htmlString) {
-                console.log(htmlString);
-                ctx.body = htmlString;
-                ctx.status = 200;
-            }, function(err) {
-                log4js.logger_log_date.error('promise请求baidu失败');
-                log4js.logger_log_date.error(err);
-            }).catch(function(err) {
-                log4js.logger_log_date.error('catch请求baidu失败');
-                log4js.logger_log_date.error(err)
-            }) */
+            ctx.body = await ctx.render('index', { data: result });
         };
     }
 };
