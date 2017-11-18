@@ -2,7 +2,7 @@ const webpack = require('webpack');
 const fs = require("fs");
 const path = require("path");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const lodash = require("lodash");
+const _ = require("lodash");
 
 const pagesPath = path.join(__dirname, '../src/web/views');
 const widgetPath = path.join(__dirname, '../src/web/widget');
@@ -11,37 +11,34 @@ const jsEntries = {};
 fs.readdirSync(pagesPath).map((o, filename) => {
     const _fd = pagesPath + "/" + o;
     fs.readdirSync(_fd).map((innero, infile) => {
-        //console.log(innero);
         if (/\.entry\.js$/.test(innero)) {
-            jsEntries[innero.replace(".entry.js", "")] = _fd + "/" + o;
+            jsEntries[innero.replace(".entry.js", "")] = _fd + "/" + innero;
         }
     })
 })
 
 const _entries = Object.assign(jsEntries);
+console.log(_entries)
 const _module = {
-    rules: [{
+    rules: [
+        {
         test: /\.css$/,
-        loader: ExtractTextPlugin.extract({
-            fallback: 'style-loader',
-            use: [{
-                loader: 'css-loader'
-            }, {
-                loader: 'postcss-loader',
-                options: {
-                    plugins: function() {
-
-                    }
-                }
-            }]
+        use: ExtractTextPlugin.extract({
+          fallback: "style-loader",
+          use: [{
+            loader : "css-loader"
+          }/*,{
+            loader :"postcss-loader"
+          }*/]
         })
-    }, {
-        test: /\.js$/,
-        loader: 'babel-loader',
-        options: {
-            "preset": ["es2015", "stage-0"]
-        }
-    }]
+      },
+        {
+            test: /\.js$/,
+            loader: 'babel-loader',
+            options: {
+                "presets": ["env"]
+            }
+        }]
 }
 
 const _resolve = {
@@ -58,21 +55,27 @@ _prodLoaders.push({
     loader: "fileloader?name=assets/images/[name].[hash:5].[ext]"
 })
 
+const _plugins = [
+    new ExtractTextPlugin("styles.css"),
+];
+
 const WebpackConfig = {
     dev: {
         entry: _entries,
         module: {
             rules: _devLoaders
         },
-        resolve: _resolve
+        resolve: _resolve,
+        plugins : _plugins
     },
     prod: {
         entry: _entries,
         module: {
             rules: _prodLoaders
         },
-        resolve: _resolve
+        resolve: _resolve,
+        plugins : _plugins
     }
 }
 
-export default WebpackConfig
+module.exports = WebpackConfig

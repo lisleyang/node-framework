@@ -1,4 +1,6 @@
-const conf = require("./wepack.conf");
+const conf = require("./webpack.conf");
+const path = require("path");
+
 const options = {
     output: {
         path: path.join(__dirname, '../build/'),
