@@ -20,25 +20,29 @@ fs.readdirSync(pagesPath).map((o, filename) => {
 const _entries = Object.assign(jsEntries);
 console.log(_entries)
 const _module = {
-    rules: [
-        {
-        test: /\.css$/,
-        use: ExtractTextPlugin.extract({
-          fallback: "style-loader",
-          use: [{
-            loader : "css-loader"
-          }/*,{
-            loader :"postcss-loader"
-          }*/]
-        })
-      },
+    rules: [{
+            test: /\.css$/,
+            use: ExtractTextPlugin.extract({
+                fallback: "style-loader",
+                use: [{
+                        loader: "css-loader"
+                    }
+                    /*,{
+                                loader :"postcss-loader"
+                              }*/
+                ]
+            })
+        },
         {
             test: /\.js$/,
             loader: 'babel-loader',
             options: {
-                "presets": ["env"]
+                "presets": ["env", {
+                    "modules": false //不设置的话treeSheking和hostScoping都不能用
+                }]
             }
-        }]
+        }
+    ]
 }
 
 const _resolve = {
@@ -66,7 +70,7 @@ const WebpackConfig = {
             rules: _devLoaders
         },
         resolve: _resolve,
-        plugins : _plugins
+        plugins: _plugins
     },
     prod: {
         entry: _entries,
@@ -74,7 +78,7 @@ const WebpackConfig = {
             rules: _prodLoaders
         },
         resolve: _resolve,
-        plugins : _plugins
+        plugins: _plugins
     }
 }
 
