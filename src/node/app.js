@@ -21,6 +21,7 @@ app.context.render = co.wrap(render({
 
 errorHandler.error(app, log4js);
 controllerInit.getAllRouters(app, router);
+
 app.use(serve(config.staticDir));
 
 const server = app.listen(config.port, () => {

@@ -9,7 +9,7 @@ const options = {
         filename: "assets/scripts/[name].bundle.js"
     },
     plugins: [
-        new webpack.HotModuleReplacementPlugins(),
+        new webpack.HotModuleReplacementPlugin(),
         new webpack.optimize.ModuleConcatenationPlugin(), //scope hoisting 去除if(true ==false )之类的代码
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || "dev")

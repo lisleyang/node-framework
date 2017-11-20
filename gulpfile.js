@@ -7,7 +7,7 @@ gulp.task('builddev', ['buildprod'], () => {
     return watch('./src/node/**/*.js', {
         ignoreInitial: true
     }, () => {
-        gulp.src('./src/**/*.js')
+        gulp.src('./src/node/**/*.js')
             .pipe(babel({
                 babelrc: false,
                 plugins: [
@@ -20,7 +20,7 @@ gulp.task('builddev', ['buildprod'], () => {
 
 gulp.task('buildprod', () => {
     //直接编译
-    gulp.src('./src/**/*.js')
+    gulp.src('./src/node/**/*.js')
         .pipe(babel({
             //如果不设置成false，会使用外面的babelrc；外面的babelrc是给webpack用的
             babelrc: false,
