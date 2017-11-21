@@ -1,7 +1,14 @@
+:root {
+    --mainColor: yellowgreen;
+}
+
 .yd-footer {
     height: 150px;
     line-height: 150px;
     text-align: center;
-    background: yellowgreen;
+    background: var(--mainColor);
     color: white;
+    span {
+        color: red;
+    }
 }

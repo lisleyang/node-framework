@@ -17,29 +17,26 @@ fs.readdirSync(pagesPath).map((o, filename) => {
     })
 })
 
-const _entries = Object.assign(jsEntries);
-console.log(_entries)
+const _entries = Object.assign(jsEntries); //{ 'index-index': 'C:\\Users\\Administrator\\Desktop\\jiagou\\src\\web\\views/index/index-index.entry.js' }
 const _module = {
     rules: [{
             test: /\.css$/,
             use: ExtractTextPlugin.extract({
                 fallback: "style-loader",
+                /* 
+                                use: "css-loader" */
                 use: [{
-                        loader: "css-loader"
-                    }
-                    /*,{
-                                loader :"postcss-loader"
-                              }*/
-                ]
+                    loader: "css-loader"
+                }, {
+                    loader: "postcss-loader"
+                }]
             })
         },
         {
             test: /\.js$/,
             loader: 'babel-loader',
             options: {
-                "presets": ["env", {
-                    "modules": false //不设置的话treeSheking和hostScoping都不能用
-                }]
+                "presets": ["env"]
             }
         }
     ]
@@ -59,26 +56,20 @@ _prodLoaders.push({
     loader: "fileloader?name=assets/images/[name].[hash:5].[ext]"
 })
 
-const _plugins = [
-    new ExtractTextPlugin("styles.css"),
-];
-
 const WebpackConfig = {
     dev: {
         entry: _entries,
         module: {
             rules: _devLoaders
         },
-        resolve: _resolve,
-        plugins: _plugins
+        resolve: _resolve
     },
     prod: {
         entry: _entries,
         module: {
             rules: _prodLoaders
         },
-        resolve: _resolve,
-        plugins: _plugins
+        resolve: _resolve
     }
 }
 
