@@ -2,7 +2,9 @@ const conf = require("./webpack.conf");
 const path = require("path");
 const webpack = require("webpack");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlAfterWebpackPlugin = require("./htmlAfterWebpackPlugin");
 
 const options = {
     output: {
@@ -24,7 +26,13 @@ const options = {
                     drop_console: true
                 } */
             }
-        })
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'views/admin.html',
+            template: 'src/web/views/index/pages/index.html',
+            inject: false
+        }),
+        new HtmlAfterWebpackPlugin({})
 
     ]
 }
